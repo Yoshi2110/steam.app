@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/steam_bg_dark"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_library"
+            android:textColor="@color/steam_blue_accent"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Library Filter Search Box -->
+        <EditText
+            android:id="@+id/etSearchLibrary"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="12dp"
+            android:autofillHints=""
+            android:background="@drawable/bg_search_box"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="10dp"
+            android:hint="@string/search_library_hint"
+            android:inputType="text"
+            android:paddingHorizontal="12dp"
+            android:textColor="@color/steam_text_primary"
+            android:textColorHint="@color/steam_text_secondary"
+            android:textSize="13sp" />
+
+        <!-- Recently Played Games Horizontal Carousel -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/recent_games"
+            android:textColor="@color/steam_blue_accent"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvRecentLibraryGames"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_game_horizontal" />
+
+        <!-- All Owned Games Vertical List -->
+        <TextView
+            android:id="@+id/tvLibraryCountTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="12dp"
+            android:textColor="@color/steam_blue_accent"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="Sua Coleção de Jogos (35)" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvLibraryGames"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            tools:itemCount="8"
+            tools:listitem="@layout/item_game_library" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

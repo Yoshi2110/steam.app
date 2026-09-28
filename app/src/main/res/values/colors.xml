@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Steam Brand Colors -->
+    <color name="steam_bg_dark">#101823</color>
+    <color name="steam_card_bg">#1b2838</color>
+    <color name="steam_header_bg">#171a21</color>
+    <color name="steam_blue_accent">#66c0f4</color>
+    <color name="steam_green_btn">#a4d007</color>
+    <color name="steam_green_btn_pressed">#8eb805</color>
+
+    <!-- UI Helpers -->
+    <color name="steam_search_bg">#2a475e</color>
+    <color name="steam_category_bg">#213247</color>
+    <color name="steam_text_primary">#FFFFFF</color>
+    <color name="steam_text_secondary">#8F98A0</color>
+    <color name="steam_review_positive">#66C0F4</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

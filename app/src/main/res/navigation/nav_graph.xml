@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/storeFragment">
+
+    <fragment
+        android:id="@+id/storeFragment"
+        android:name="com.example.appsteam.StoreFragment"
+        android:label="Loja"
+        tools:layout="@layout/fragment_store">
+        <action
+            android:id="@+id/action_storeFragment_to_gameDetailFragment"
+            app:destination="@id/gameDetailFragment" />
+        <action
+            android:id="@+id/action_storeFragment_to_categoryDetailFragment"
+            app:destination="@id/categoryDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.example.appsteam.CategoriesFragment"
+        android:label="Categorias"
+        tools:layout="@layout/fragment_categories">
+        <action
+            android:id="@+id/action_categoriesFragment_to_categoryDetailFragment"
+            app:destination="@id/categoryDetailFragment" />
+        <action
+            android:id="@+id/action_categoriesFragment_to_gamerEventsFragment"
+            app:destination="@id/gamerEventsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/libraryFragment"
+        android:name="com.example.appsteam.LibraryFragment"
+        android:label="Biblioteca"
+        tools:layout="@layout/fragment_library">
+        <action
+            android:id="@+id/action_libraryFragment_to_gameDetailFragment"
+            app:destination="@id/gameDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/gamerEventsFragment"
+        android:name="com.example.appsteam.GamerEventsFragment"
+        android:label="Eventos e Lojas Gamers"
+        tools:layout="@layout/fragment_gamer_events" />
+
+    <fragment
+        android:id="@+id/gameDetailFragment"
+        android:name="com.example.appsteam.GameDetailFragment"
+        android:label="Detalhes"
+        tools:layout="@layout/fragment_game_detail">
+        <argument
+            android:name="gameId"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="gameTitle"
+            app:argType="string"
+            android:defaultValue="Jogo" />
+        <argument
+            android:name="gamePrice"
+            app:argType="string"
+            android:defaultValue="Grátis" />
+        <argument
+            android:name="gameReview"
+            app:argType="string"
+            android:defaultValue="Muito Positivas" />
+        <argument
+            android:name="imageResId"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="gameDescription"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="gameOriginalPrice"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="gameDiscount"
+            app:argType="string"
+            android:defaultValue="" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/categoryDetailFragment"
+        android:name="com.example.appsteam.CategoryDetailFragment"
+        android:label="Categoria"
+        tools:layout="@layout/fragment_category_detail">
+        <argument
+            android:name="categoryName"
+            app:argType="string"
+            android:defaultValue="Zombies" />
+        <action
+            android:id="@+id/action_categoryDetailFragment_to_gameDetailFragment"
+            app:destination="@id/gameDetailFragment" />
+    </fragment>
+</navigation>

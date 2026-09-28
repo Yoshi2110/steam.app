@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Eventos e Lojas Gamers</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #101823;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+        #map {
+            width: 100%;
+            height: 100%;
+            background-color: #1b2838;
+        }
+        .leaflet-popup-content-wrapper {
+            background-color: #1b2838;
+            color: #66c0f4;
+            border: 1px solid #66c0f4;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        .leaflet-popup-tip {
+            background-color: #1b2838;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <script>
+        // Default Fixed Point (Arena Steam Gamer & Lojas Parceiras)
+        var defaultLat = -23.550520;
+        var defaultLng = -46.633309;
+
+        var map = L.map('map').setView([defaultLat, defaultLng], 14);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap | Steam Gamer Map'
+        }).addTo(map);
+
+        var fixedMarker = L.marker([defaultLat, defaultLng]).addTo(map);
+        fixedMarker.bindPopup("<b>Arena Steam & Lojas Gamers</b><br>Ponto Fixo de Eventos Gamer").openPopup();
+
+        var userMarker = null;
+
+        function updateLocation(lat, lng) {
+            console.log("Recebida nova localização do Android GPS: " + lat + ", " + lng);
+            var userPos = [lat, lng];
+
+            if (userMarker) {
+                userMarker.setLatLng(userPos);
+            } else {
+                userMarker = L.marker(userPos).addTo(map);
+            }
+
+            userMarker.bindPopup("<b>Sua Localização Atual (GPS)</b><br>Lat: " + lat.toFixed(5) + "<br>Lng: " + lng.toFixed(5)).openPopup();
+            map.setView(userPos, 16);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Steam</string>
+    <string name="title_store">Loja</string>
+    <string name="title_categories">Categorias</string>
+    <string name="title_library">Biblioteca</string>
+    <string name="title_gamer_events">Eventos e Lojas Gamers</string>
+    <string name="default_coordinates_text">Ponto Fixo: Arena Steam Gamer (São Paulo)</string>
+    <string name="btn_my_location">Minha Localização</string>
+    <string name="search_hint">Buscar na loja Steam&#8230;</string>
+    <string name="popular_games">Todos os Destaques da Loja</string>
+    <string name="play_button">JOGAR</string>
+    <string name="install_button">INSTALAR</string>
+    <string name="buy_button">COMPRAR</string>
+    <string name="back">Voltar</string>
+    <string name="promotional_banner_title">Promoção de Verão Steam</string>
+    <string name="promotional_banner_subtitle">Descontos incríveis de até 90% OFF em mais de 60 jogos!</string>
+    <string name="menu_wishlist">DESEJOS</string>
+    <string name="menu_wallet">CARTEIRA</string>
+    <string name="menu_quick">MENU</string>
+    <string name="featured_recommended">Destaques e Recomendados</string>
+    <string name="discounts_events">Descontos e Eventos</string>
+    <string name="because_you_played">Porque Você Jogou&#8230;</string>
+    <string name="browse_by_category">Navegar por Categoria</string>
+    <string name="recent_games">Jogados Recentemente</string>
+    <string name="all_owned_games">Sua Coleção de Jogos</string>
+    <string name="category_game_count">%1$d jogos disponíveis</string>
+    <string name="filter_categories_hint">Filtrar categorias&#8230;</string>
+    <string name="gamer_events_subtitle">Encontre lojas e arenas perto de você via GPS</string>
+    <string name="recommended_highlights">Recomendados &amp; Destaques</string>
+    <string name="category_header_format">Categoria: %1$s</string>
+    <string name="category_filtered_format">Todos os jogos em %1$s (%2$d)</string>
+    <string name="search_library_hint">Buscar na sua biblioteca&#8230;</string>
+    <string name="library_count_format">Sua Coleção de Jogos (%1$d)</string>
+    <string name="user_coordinates_format">Sua Posição: Lat %1$.5f, Lng %2$.5f</string>
+</resources>

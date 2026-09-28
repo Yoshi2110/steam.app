@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Appsteam" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="android:windowBackground">@color/steam_bg_dark</item>
+        <item name="colorPrimary">@color/steam_blue_accent</item>
+        <item name="colorSecondary">@color/steam_green_btn</item>
+        <item name="android:statusBarColor">@color/steam_header_bg</item>
+        <item name="android:navigationBarColor">@color/steam_header_bg</item>
+    </style>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="90dp"
+    android:viewportWidth="400"
+    android:viewportHeight="180">
+    <!-- Gradient background effect -->
+    <path
+        android:fillColor="#1B2838"
+        android:pathData="M0,0h400v180h-400z" />
+    <path
+        android:fillColor="#2A475E"
+        android:pathData="M0,0h400v90h-400z" />
+    <!-- Game controller symbol -->
+    <path
+        android:fillColor="#66C0F4"
+        android:pathData="M220,70h-40c-11,0 -20,9 -20,20v20c0,11 9,20 20,20h40c11,0 20,-9 20,-20V90c0,-11 -9,-20 -20,-20zM190,105h-10v10h-10v-10h-10v-10h10V85h10v10h10v10zM225,100c-1.4,0 -2.5,-1.1 -2.5,-2.5s1.1,-2.5 2.5,-2.5 2.5,1.1 2.5,2.5 -1.1,2.5 -2.5,2.5z"/>
+</vector>

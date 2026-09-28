@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    app:cardBackgroundColor="@color/steam_card_bg"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp"
+    app:strokeWidth="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/imgLibraryCover"
+            android:layout_width="75dp"
+            android:layout_height="95dp"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_placeholder_game" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvLibraryTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/steam_text_primary"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:text="Left 4 Dead 2" />
+
+            <TextView
+                android:id="@+id/tvLibraryTags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/steam_text_secondary"
+                android:textSize="11sp"
+                tools:text="Zombies • FPS • Co-op" />
+
+            <TextView
+                android:id="@+id/tvLibraryHours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:textColor="@color/steam_blue_accent"
+                android:textSize="11sp"
+                tools:text="230 hrs registradas" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLibraryAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="@color/steam_green_btn"
+            android:paddingHorizontal="14dp"
+            android:text="@string/play_button"
+            android:textColor="@color/steam_bg_dark"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:cornerRadius="6dp"
+            app:icon="@drawable/ic_play"
+            app:iconTint="@color/steam_bg_dark" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
